@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* *********** START Globe *********** */
+
+:root {
+  --main-color: #343434;
+  --white-color: #fff;
+  --btn-color: #1c1c1c;
+  --parah-color: #748182;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.space {
+  letter-spacing: 2px;
+}
+
+.coloring {
+  color: var(--main-color);
+}
+
+.coloringParah {
+  color: var(--parah-color);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+section {
+  padding-block: 80px;
+}
+
+/* *********** END Globe *********** */
+
+/* *********** START FIXED *********** */
+.scroll {
+  position: fixed;
+  background: var(--main-color);
+  color: var(--white-color);
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  border-radius: 50%;
+  right: 30px;
+  bottom: 33px;
+  z-index: 999;
+}
+
+.scroll svg {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  font-size: 22px;
+  transform: translate(-50%,-50%);
+}
+
+.fixedBtn {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  color: var(--white-color);
+  background: var(--main-color);
+  font-size: 20px;
+  right: 0;
+  top:50%;
+  z-index: 999;
+  border: none;
+  }
+
+/* *********** END FIXED *********** */
+
+/* *********** START NAV *********** */
+.navbar .navbar-brand {
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 992px){
+.navbar-collapse {
+    text-align: center;
+    border: none;
+    background: var(--main-color);
+    margin-top: 5px;
+    padding-bottom: 15px;
+}
+}
+
+.navbar .nav-link {
+  position: relative;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.navbar .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--white-color);
+  transition: width 0.5s;
+
+}
+.navbar .nav-link.active::before {
+  width: 40px;
+}
+
+/* *********** END NAV *********** */
+
+/* *********** START LANDING *********** */
+.landing {
+  background: url(../image/bg.jpg) center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.landing .text ul a {
+  font-size: 14px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.landing .text h1 {
+    animation: alternate coloring 5s ease-in infinite;
+
+}
+
+@keyframes coloring {
+  0%{color: white;}
+  25%{color: aqua;}
+  50%{color: gold;}
+  75%{color: magenta;}
+  100%{color: blue;}
+}
+
+.landing .text .con::after{
+  content:"I AM Larry Daniels|";
+  font-size:38px ;
+  animation: alternate 12s typing infinite ease-in-out;
+  position:absolute;
+  transform: translate(-50%);
+}
+
+@keyframes typing {
+  0% { content: " I AM Larry Daniels|";}
+  1% { content: " I AM Larry Daniel|";}
+  2% { content: " I AM Larry Danie|";}
+  3% { content: " I AM Larry Dani|";}
+  4% { content: " I AM Larry Dan|";}
+  5% { content: " I AM Larry Da|";}
+  6% { content: " I AM Larry D|";}
+  7% { content: " I AM Larry |";}
+  8% { content: " I AM Larry|";}
+  9% { content: " I AM Larr|";}
+  10% { content: " I AM Lar|";}
+  11% { content: " I AM La|";}
+  12% { content: " I AM L|";}
+  13% { content: " I AM |";}
+  14% { content: " I AM|";}
+  15% { content: " I AM |";}
+  16% { content: " I AM D|";}
+  17% { content: " I AM De|";}
+  18% { content: " I AM Dev|";}
+  19% { content: " I AM Deve|";}
+  20% { content: " I AM Devel|";}
+  21% { content: " I AM Develo|";}
+  22% { content: " I AM Develop|";}
+  23% { content: " I AM Develope|";}
+  24% { content: " I AM Developer|";}
+  25% { content: " I AM Develope|";}
+  26% { content: " I AM Develop|";}
+  27% { content: " I AM Develo|";}
+  28% { content: " I AM Devel|";}
+  29% { content: " I AM Deve";}
+  30% { content: " I AM Dev|";}
+  31% { content: " I AM De";}
+  32% { content: " I AM D|";}
+  33% { content: " I AM |";}
+  34% { content: " I AM|";}
+  35% { content: " I AM |";}
+  36% { content: " I AM D|";}
+  37% { content: " I AM De|";}
+  38% { content: " I AM Des|";}
+  39% { content: " I AM Desi|";}
+  40% { content: " I AM Desig|";}
+  41% { content: " I AM Design|";}
+  42% { content: " I AM Designe|";}
+  43% { content: " I AM Designer|";}
+  44% { content: " I AM Designe|";}
+  45% { content: " I AM Design|";}
+  46% { content: " I AM Desig|";}
+  47% { content: " I AM Desi|";}
+  48% { content: " I AM Des|";}
+  49% { content: " I AM De|";}
+  50% { content: " I AM D|";}
+  51% { content: " I AM |";}
+  52% { content: " I AM|";}
+  53% { content: " I AM C|";}
+  54% { content: " I AM CE";}
+  55% { content: " I AM CEO|";}
+  56% { content: " I AM CEO |";}
+  57% { content: " I AM CEO D|";}
+  58% { content: " I AM CEO De|";}
+  59% { content: " I AM CEO Dev|";}
+  60% { content: " I AM CEO DevF|";}
+  61% { content: " I AM CEO DevFo|";}
+  62% { content: " I AM CEO DevFol|";}
+  63% { content: " I AM CEO DevFoli|";}
+  64% { content: " I AM CEO DevFolio|";}
+  65% { content: " I AM CEO DevFoli|";}
+  66% { content: " I AM CEO DevFol|";}
+  67% { content: " I AM CEO DevFo|";}
+  68% { content: " I AM CEO DevF|";}
+  69% { content: " I AM CEO Dev|";}
+  70% { content: " I AM CEO De|";}
+  71% { content: " I AM CEO D|";}
+  72% { content: " I AM CEO |";}
+  73% { content: " I AM CEO|";}
+  74% { content: " I AM CE|";}
+  75% { content: " I AM C|";}
+  76% { content: " I AM |";}
+  77% { content: " I AM|";}
+  78% { content: " I AM F|";}
+  79% { content: " I AM Fr|";}
+  80% { content: " I AM Fro|";}
+  81% { content: " I AM Fron|";}
+  82% { content: " I AM Front|";}
+  83% { content: " I AM Fronte|";}
+  84% { content: " I AM Fronten|";}
+  85% { content: " I AM Frontend|";}
+  86% { content: " I AM Frontend |";}
+  87% { content: " I AM Frontend |";}
+  88% { content: " I AM Frontend |";}
+  89% { content: " I AM Frontend |";}
+  90% { content: " I AM Frontend |";}
+  91% { content: " I AM Frontend |";}
+  92% { content: " I AM Frontend |";}
+  93% { content: " I AM Frontend |";}
+  94% { content: " I AM Frontend |";}
+  95% { content: " I AM Frontend |";}
+  96% { content: " I AM Frontend |";}
+  97% { content: " I AM Frontend |";}
+  98% { content: " I AM Frontend |";}
+  99% { content: " I AM Frontend |";}
+  100% { content: " I AM Frontend|";}
+}
+/* *********** END LANDING *********** */
+
+/* *********** START ABOUT *********** */
+.about .btns :nth-of-type(1),
+.about .btns :nth-of-type(2),
+.contact form .submit {
+  padding: 12px 32px;
+  border: 1px solid var(--btn-color);
+  border-radius: 5px;
+  font-size: 15px;
+  transition: all 0.5s;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--btn-color);
+}
+
+.about .btns :nth-of-type(2) {
+  color: var(--main-color);
+  background-color: var(--white-color);
+}
+
+.about .btns :nth-of-type(1):hover {
+  color: var(--main-color);
+  background-color: var(--white-color);
+}
+
+.about .btns :nth-of-type(2):hover {
+  color: var(--white-color);
+  background-color: var(--btn-color);
+}
+/* *********** END ABOUT *********** */
+
+/* *********** START SERVICES *********** */
+.services .service-icon {
+  font-size: 30px;
+  margin: 25px 20px;
+  margin-inline: auto;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  transition: all 0.5s;
+}
+
+.services .card:hover .service-icon {
+  background-color: var(--btn-color);
+  color: var(--white-color);
+}
+/* *********** END SERVICES *********** */
+
+/* *********** START PORTFOLIO *********** */
+.nav-pills .nav-link.active,
+.nav-pills .nav-link {
+  background-color: var(--white-color);
+  color: var(--btn-color);
+}
+
+.nav-pills .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -2px;
+  width: 0;
+  height: 3px;
+  background: var(--btn-color);
+  transition: width 0.4s;
+}
+
+.nav-pills .nav-link.active::after {
+  width: 50%;
+}
+
+.portfolio .layer {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: rgba(255, 255, 255, 0.95);
+  opacity: 0;
+  transition: all .5s;
+  z-index: 2;
+  transform: translateY(10px);
+}
+
+.portfolio .image:hover .layer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio .layer .text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  text-align: center;
+  
+}
+
+.portfolio .layer .text h6 {
+  font-size: 12px;
+  position: relative;
+  margin-bottom: 15px;
+  transform: translateY(-15px);
+  transition: transform .5s;
+}
+
+.portfolio .image:hover h6,
+.portfolio .image:hover .icons svg {
+  transform: translateY(0)
+}
+
+.portfolio .layer .icons svg {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  line-height: 14px;
+  border-radius: 50%;
+  border: 5px solid var(--btn-color);
+  background: var(--btn-color);
+  color: var(--white-color);
+}
+
+.portfolio .layer .icons svg:hover{
+  color: var(--btn-color);
+  border: 5px solid var(--white-color);
+  background-color: var(--white-color);
+  cursor: pointer;
+}
+
+/* *********** END PORTFOLIO *********** */
+
+/* *********** START TESTIMONIALS *********** */
+
+.testimonials .carousel-indicators [data-bs-target] {
+  all: unset;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  margin: 5px 7px;
+  background: #d6d6d6;
+  cursor: pointer;
+}
+
+.testimonials .carousel-indicators {
+  margin-bottom: -30px;
+}
+.testimonials .carousel-indicators .active,
+.testimonials .carousel-indicators [data-bs-target]:hover {
+  background: #869791;
+}
+
+.testimonials .carousel-item p,
+.testimonials .carousel-item h4 {
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+.testimonials .carousel-item.active p,
+.testimonials .carousel-item.active h4 {
+  transform: scale(1); 
+}
+/* *********** END TESTIMONIALS *********** */
+
+/* *********** START NUMBERS *********** */
+
+/* *********** END NUMBERS *********** */
+
+/* *********** START BLOG *********** */
+
+.blog .carousel-inner .card img{
+  transition: transform 0.5s;
+}
+
+.blog .carousel-inner .card:hover img {
+  transform: scale(1.2);
+}
+
+.blog .carousel-inner .card .read::after {
+  content: "";
+  position: absolute;
+  width: 84px;
+  height: 2px;
+  background-color: var(--btn-color);
+  bottom: 28px;
+  left: 17px;
+}
+
+.blog .carousel-indicators [data-bs-target] {
+  all: unset;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  margin: 5px 7px;
+  background: #d6d6d6;
+  cursor: pointer;
+}
+
+.blog .carousel-indicators {
+  margin-bottom: -30px;
+}
+.blog .carousel-indicators .active,
+.blog .carousel-indicators [data-bs-target]:hover {
+  background: #869791;
+}
+
+.blog .carousel-item p,
+.blog .carousel-item h4,
+.blog .carousel-item .card {
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+.blog .carousel-item.active p,
+.blog .carousel-item.active h4,
+.blog .carousel-item.active .card {
+  transform: scale(1); 
+}
+/* *********** END BLOG *********** */
+
+/* *********** START CONTACT *********** */
+.contact .contact-con div {
+  font-size: 30px;
+  margin: 25px 20px;
+  margin-inline: auto;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  transition: all 0.5s;
+}
+
+.contact .contact-con:hover div  {
+  background-color: var(--btn-color);
+  color: var(--white-color);
+}
+
+.contact form input[type='text'],
+.contact form input[type='email'],
+.contact form textarea {
+  background: #f4f4f4;
+}
+
+.contact form .submit {
+  padding: 7px 35px;
+  margin-top: 20px ;
+}
+/* *********** END CONTACT *********** */
+
+/* *********** START FOOTER *********** */
+
+/* *********** END FOOTER *********** */
